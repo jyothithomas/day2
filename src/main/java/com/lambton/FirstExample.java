@@ -41,6 +41,7 @@ public class FirstExample
 
         double x1 = 1_00_00.5_0/10;
         System.out.println(x1);
+        System.out.println(i3);
 
 
 
