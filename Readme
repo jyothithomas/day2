@@ -1,0 +1,321 @@
+Jyothi Thomas  17:02
+public class Main
+{
+	public static void main(String[] args) {
+	   // int max = 0;
+		System.out.println("Hello World");
+		int[] ar = new int[5];
+		int len = ar.length;
+		String[] array1 = {"india","Canada"};
+		ar[0]  =100;
+		ar[1] = 200;
+		for(int i=0;i<len;i++){
+		    System.out.println(ar[i]);
+		}
+		char[] ch = new char[4];
+		ch[0] ='i';
+		ch[1] = 'c';
+		for(int j = array1.length -1; j>=0;j--){
+		    System.out.println(array1[j]);
+		}
+		String s = "hai world";
+		len = s.length();
+		char[] new_ch = s.toCharArray();
+		System.out.println(new_ch);
+		for(int k1 =0;k1<=len-1;k1++){
+		    System.out.println(new_ch[k1]);
+		}
+		for(int k=len-1; k>=0; k--){
+		    System.out.println(new_ch[k]);
+		}
+		int int_array[] = new int[4];
+		int sum = 0;
+		int len_array = int_array.length;
+		int_array[0]=291;
+		int_array[1]=5;
+		int_array[2]=190;
+		int_array[3] = 6;
+		for(int l=0;l<4;l++)
+		{
+		    sum+=int_array[l];		}
+		System.out.println(sum);
+		System.out.println("average is:"+sum/len_array);
+		int min=int_array[0],max =int_array[0];
+		for(int k2=0;k2<int_array.length;k2++){
+		    if(min>=int_array[k2]){
+		        min= int_array[k2];
+		    }		}
+		System.out.println("min:"+ min);
+		for(int k3=0;k3<int_array.length;k3++){
+		    if(max<int_array[k3]){
+		        max= int_array[k3];
+		    }		}
+		System.out.println("max:"+ max);
+	}
+}
+Jyothi Thomas  17:12
+public class Main
+{
+	public static void main(String[] args) {
+	    //pyramid right angle triangle
+	    for(int i=0;i<10;i++){
+	        for(int j=0;j<i;j++){
+	        System.out.print("hello");
+	        }
+	        System.out.println();
+	    }	}}
+Jyothi Thomas  17:24
+public static void main(String[] args) {	      for (int i=0; i<10; i++)
+        {            // inner loop to handle number spaces
+            // values changing acc. to requirement
+            for (int j=2*(10-i); j>1; j--)
+            {
+                // printing spaces
+                System.out.print(" ");
+            }            //  inner loop to handle number of columns
+            //  values changing acc. to outer loop
+            for (int j=0; j<=i; j++ )
+            {
+                // printing stars
+                System.out.print("* ");
+            }            // ending line after each row
+            System.out.println();
+        }
+	}
+Jyothi Thomas  17:30
+public static void main(String[] args) {
+	    int num =0 ;
+	    for(int i=0;i<10;i++){
+	        for(int k=0;k<i;k++){
+	           System.out.print(num+" ");
+	           num++;
+	        } System.out.println();
+	    }
+	}
+Jyothi Thomas  18:28
+public static void main (String[] args) {	String s = "haiworld";	char tempArray[] = new char[4];
+	tempArray[0]='j';
+	tempArray[1]='h';
+	tempArray[2]='l';
+	tempArray[3]='k';
+	Arrays.sort(tempArray);
+	System.out.println(tempArray);    }
+Jyothi Thomas  18:46
+public static void main (String[] args) {
+    String temp;
+    String[] s = new String[] {"one","five","nine","four"};
+    int len = s.length;
+	for(int i=0;i<len;i++){
+	    for(int j=i+1;j<len;j++){
+	       // System.out.print(s[i]+s[j]);
+	        if(s[i].compareTo(s[j])>0){
+	            temp=s[i];
+	            s[i]=s[j];
+	            s[j]=temp;
+	           // System.out.println(s[j]);
+	     }
+	    }	}
+	for (int i = 0; i <= len-1; i++)
+        {
+            System.out.print(s[i] + ", ");
+        }
+Jyothi Thomas  13:46
+public static void main(String []args){
+       List<Integer> l1 = new ArrayList<Integer>();
+       l1.add(0,1);
+       l1.add(1,4);
+       System.out.println("l1 is ="+l1);
+       List<Integer> l2 = new ArrayList<Integer>();
+       l2.add(2);
+       l2.add(4);
+       System.out.println("l2 is ="+l2);
+       l1.addAll(1,l2);
+       System.out.println("l1 is ="+l1);
+       l1.remove(3);
+       System.out.println("l1 is ="+l1);
+       l1.set(2,5);
+       System.out.println("l1 is ="+l1);
+     }
+Jyothi Thomas  13:54
+public static void main(String []args){
+       List<String> l1 = new ArrayList<String>();
+       l1.add("jyothi");
+       l1.add("james");
+       l1.add("raelyn");
+       System.out.println(l1);
+       System.out.println(l1.indexOf("james"));
+     }
+Jyothi Thomas  14:45
+
+git --version
+git init
+git clone <Repo url with .git>
+git remote -v
+git add <File Name>
+git commit -m "Initial Commit"
+git push
+git pull
+
+Jyothi Thomas  15:57
+
+public void hashMap(){
+    HashMap <Integer,String > hmp = new HashMap<Integer, String>();
+    hmp.put(1,"world");
+    hmp.put(2,"java");
+    if(hmp.containsKey("hai")){
+        System.out.println("contains::::"+hmp.get("hai"));
+    }
+    Set<Integer> set = hmp.keySet();
+    System.out.println("initial keys::::"+set);    Collection<String> collection = hmp.values();
+    System.out.println("initial values::::"+collection);    hmp.put(3,"more");
+    System.out.println("new  keys::::"+set);
+    System.out.println("new values::::"+collection);
+    System.out.println(hmp.containsValue("more"));}
+
+Jyothi Thomas  16:17
+
+Scanner input = new Scanner(in);
+//SUM OF INTEGERS IN A NUMBER
+int sum =0;
+System.out.println("enter number 1");
+Long firstNum = input.nextLong();
+while(firstNum!=0){    sum+=firstNum%10;
+    firstNum/=10;
+}
+System.out.println(sum);
+
+Jyothi Thomas  16:33
+
+public void stringHandling(){
+    int alphacount = 0, spacecount =0, numcount =0;
+    Scanner in = new Scanner(System.in);
+    System.out.println("enter the string");
+    String s = in.nextLine();
+    char ch[] = s.toCharArray();
+    for(int i=0;i<ch.length;i++){
+        if(Character.isAlphabetic(ch[i])){
+            alphacount++;
+        }
+        if(Character.isDigit(ch[i])){
+            numcount++;
+        }
+        if(Character.isSpaceChar(ch[i])){
+            spacecount++;        }    }
+    System.out.println(alphacount);
+    System.out.println(numcount);
+    System.out.println(spacecount);}
+
+Jyothi Thomas  08:56
+import java.util.*;public class Main {    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input seconds: ");
+		int seconds = in.nextInt();
+        int p1 = seconds % 60;
+        int p2 = seconds / 60;
+        int p3 = p2 % 60;
+        p2 = p2 / 60;
+        System.out.print( p2 + ":" + p3 + ":" + p1);
+		System.out.print("\n");
+		Scanner iin = new Scanner(System.in);
+     System.out.print("Input a Sentence: ");
+	 String line = iin.nextLine();
+	 String upper_case_line = "";
+       Scanner lineScan = new Scanner(line);
+         while(lineScan.hasNext()) {
+             String word = lineScan.next();
+             upper_case_line += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ";
+         }
+      System.out.println(upper_case_line.trim());    }
+}
+Jyothi Thomas  09:53
+
+import java.util.Scanner;
+public class Exercise9 {  public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);        System.out.print("Input the year: ");
+        int year = in.nextInt();        boolean x = (year % 4) == 0;
+        boolean y = (year % 100) != 0;
+        boolean z = ((year % 100 == 0) && (year % 400 == 0));        if (x && (y || z))
+        {
+            System.out.println(year + " is a leap year");
+        }
+        else
+        {
+            System.out.println(year + " is not a leap year");
+        }
+    }
+}
+
+Jyothi Thomas  10:13
+import java.util.*;public class Main {    public static void main(String[] args) {
+        int sum = 0;
+        float avg;
+        int[] array1 = {10,32,6,72,12};
+        String[] string1 = {"My","World","Is","Java"};
+        //Arrays.toString(array1);
+        //System.out.println(Arrays.sort(array1));
+        Arrays.sort(array1);
+        System.out.println(Arrays.toString(array1));
+        Arrays.sort(string1);
+        System.out.println(Arrays.toString(string1));    }
+}
+Jyothi Thomas  11:55
+
+public class Main {
+   public static void main(String[] args) {
+        String STR_TO_INT = "1323";
+        String STR_TO_LONG = "13625478965325";
+        String STR_TO_FLOAT = "25.135F";
+        String STR_TO_DOUBLE = "21.25478254D";       System.out.println("Convert String to int/Integer:");
+       Integer toInt1 = Integer.valueOf(STR_TO_INT);
+       int toInt2 = Integer.parseInt(STR_TO_INT);
+       System.out.println("\"" + STR_TO_INT + "\"" + " as int is "
+               + toInt1 + " and as Integer is " + toInt2);       System.out.println("\nConvert String to long/Long:");
+       Long toLong1 = Long.valueOf(STR_TO_LONG);
+       long toLong2 = Long.parseLong(STR_TO_LONG);
+       System.out.println("\"" + STR_TO_LONG + "\"" + " as long is "
+               + toLong1 + " and as Long is " + toLong2);
+       System.out.println("\nConvert String to float/Float:");
+       Float toFloat1 = Float.valueOf(STR_TO_FLOAT);
+       float toFloat2 = Float.parseFloat(STR_TO_FLOAT);
+       System.out.println("\"" + STR_TO_FLOAT + "\"" + " as float is "
+               + toFloat1 + " and as Float is " + toFloat2);       System.out.println("\nConvert String to double/Double:");
+       Double toDouble1 = Double.valueOf(STR_TO_DOUBLE);
+       double toDouble2 = Double.parseDouble(STR_TO_DOUBLE);
+       System.out.println("\"" + STR_TO_DOUBLE + "\"" + " as double is "
+               + toDouble1 + " and as Double is " + toDouble2);
+   }
+}
+
+Jyothi Thomas  12:01
+
+import java.util.*;
+public class Exercise1 {
+  public static void main(String[] args) {
+  List<String> list_Strings = new ArrayList<String>();
+  list_Strings.add("Red");
+  list_Strings.add("Green");
+  list_Strings.add("Orange");
+  list_Strings.add("White");
+  list_Strings.add("Black");
+  System.out.println(list_Strings);
+ }
+}
+
+Jyothi Thomas  12:12
+
+import java.util.*;
+  public class Exercise11 {
+  public static void main(String[] args) {
+  // Creae a list and add some colors to the list
+  List<String> list_Strings = new ArrayList<String>();
+  list_Strings.add("Red");
+  list_Strings.add("Green");
+  list_Strings.add("Orange");
+  list_Strings.add("White");
+  list_Strings.add("Black");
+  System.out.println("List before reversing :\n" + list_Strings);  
+  Collections.reverse(list_Strings);
+  System.out.println("List after reversing :\n" + list_Strings); 
+ }
+}
